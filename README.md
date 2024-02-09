@@ -17,8 +17,10 @@ whether to transition to it or reverse the gesture and abort the transition.
 ## Example Use Cases:
 
 #### Predictive Back Navigation
-![Example showing the use of a gesture which shows the user a preview of what
-happens when executing the "back" action in Android.](example-predictive-back.gif)
+<p align="center">
+<img alt="Example showing the use of a gesture which shows the user a preview of what
+happens when executing the back action in Android" src="example-predictive-back.gif" width=300>
+</p>
 
 #### Infinite carousels
 TODO
