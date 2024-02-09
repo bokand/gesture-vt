@@ -72,16 +72,16 @@ release the gesture intending to stay on the original view), the original
 document has to be (potentially) reloaded. This is a bad UX and not how gesture
 transitions typically work in native apps and SPAs.
 
-The first missing piece for gesture navigations is an MPA model with
-“transition-before-update” - the transition must run on the outgoing page. This
+**The first missing piece for gesture navigations is an MPA model with
+“transition-before-update” - the transition must run on the outgoing page**. This
 implies the ability to provide the View Transitions API with snapshots from a
 non-active document (e.g. from BFCache, or from a prerender).  
 
 In a gesture transition, the app has to respond immediately to the user. But the
 next view may not be in a BFCache or Prerender. The transition must be able to
-start without waiting on a network fetch and load. This leads to the second
+start without waiting on a network fetch and load. This leads to **the second
 missing piece: the ability to provide “fallback” content for View Transitions to
-use, if the primary snapshot isn’t immediately available. Some ideas on
+use, if the primary snapshot isn’t immediately available**. Some ideas on
 potential solutions:
 
 * Specify an invisible subtree of the outgoing DOM as a fallback snapshot. An
