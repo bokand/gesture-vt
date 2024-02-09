@@ -22,8 +22,10 @@ whether to transition to it or reverse the gesture and abort the transition.
 happens when executing the back action in Android" src="example-predictive-back.gif" width="300">
 </p>
 
+<!--
 #### Infinite carousels
 TODO
+-->
 
 #### Tab switchers
 <p align="center">
