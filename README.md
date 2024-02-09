@@ -19,14 +19,16 @@ whether to transition to it or reverse the gesture and abort the transition.
 #### Predictive Back Navigation
 <p align="center">
 <img alt="Example showing the use of a gesture which shows the user a preview of what
-happens when executing the back action in Android" src="example-predictive-back.gif" width=300>
+happens when executing the back action in Android" src="example-predictive-back.gif" width="300">
 </p>
 
 #### Infinite carousels
 TODO
 
 #### Tab switchers
-TODO
+<p align="center">
+<img alt="Example showing swiping between tabs of an app" src="example-twitter.gif" width="300">
+</p>
 
 ## In SPAs
 
@@ -48,7 +50,9 @@ In a typical MPA view transition, the order of events is:
 3. (Once incoming page is ready to render) capture snapshot of incoming page
 4. Create a view transition and play it
 
-TODO: Diagram
+<p align="center">
+<img alt="A diagram showing the above steps of a cross-document view transition" src="diagram.jpg" height="300">
+</p>
 
 This is a “transition-after-update” model -  the transition animation occurs on
 the incoming page, after the navigation has updated the app’s state. 
