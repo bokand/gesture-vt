@@ -52,21 +52,18 @@ In a typical MPA view transition, the order of events is:
 3. (Once incoming page is ready to render) capture snapshot of incoming page
 4. Create a view transition and play it
 
-<p align="center">
-<img alt="A diagram showing the above steps of a cross-document view transition" src="diagram.jpg" height="300">
-</p>
-
 This is a “transition-after-update” model -  the transition animation occurs on
 the incoming page, after the navigation has updated the app’s state. 
 
 
 However, for a transition to be gesture-driven, the input stream must start on
 the outgoing page. Assuming we could use a continuous gesture stream across
-document navigations - consider an ordinary MPA view transition on an app that
-uses a back swipe to reveal the previous page in the session history. The moment
-a user starts a drag, the current view is unloaded and replaced by a static
-snapshot. Videos and animations stop playing and any unpersisted state (focus?
-Scroll offsets? Form data? etc) is lost. The user has technically already
+document navigations - lets consider a back swipe revealing a previous page
+in the session history using an ordinary MPA view transition.
+
+The moment a user starts a drag, the current view is unloaded and replaced by a
+static snapshot. Videos and animations stop playing and any unpersisted state
+(focus? Scroll offsets? Form data? etc) is lost. The user has technically already
 navigated back in history. If they change their mind and abort the gesture (i.e.
 release the gesture intending to stay on the original view), the original
 document has to be (potentially) reloaded. This is a bad UX and not how gesture
@@ -76,6 +73,11 @@ transitions typically work in native apps and SPAs.
 “transition-before-update” - the transition must run on the outgoing page**. This
 implies the ability to provide the View Transitions API with snapshots from a
 non-active document (e.g. from BFCache, or from a prerender).  
+
+<p align="center">
+<img alt="A diagram showing the above steps of a cross-document view transition" src="diagram.jpg" height="300">
+</p>
+
 
 In a gesture transition, the app has to respond immediately to the user. But the
 next view may not be in a BFCache or Prerender. The transition must be able to
