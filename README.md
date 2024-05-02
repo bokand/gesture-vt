@@ -1,7 +1,9 @@
 # Gesture-Driven View Transitions
 
-This explainer explores the additions required to enable web authors to use view
-transitions in gesture-based transitions.
+This explainer explores enabling web authors to use view transitions in
+gesture-based transitions.
+
+See the [proposed API](API.md) for a potential first step in this direction.
 
 ## Gesture Based Transition
 
@@ -16,7 +18,7 @@ whether to transition to it or reverse the gesture and abort the transition.
 
 ## Example Use Cases:
 
-#### Predictive Back Navigation
+#### Predictive Back Navigation (example from native)
 <p align="center">
 <img alt="Example showing the use of a gesture which shows the user a preview of what
 happens when executing the back action in Android" src="example-predictive-back.gif" width="300">
